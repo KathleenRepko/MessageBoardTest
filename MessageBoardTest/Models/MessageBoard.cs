@@ -9,11 +9,11 @@ namespace MessageBoardTutorial.Models
 {
     public class MessageBoardContext : DbContext
     {
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
     }
 
-    public class Post
+    public class post
     {
         [Key]
         public int Id { get; set; }
@@ -30,6 +30,6 @@ namespace MessageBoardTutorial.Models
         public string Message { get; set; }
         public string Username { get; set; }
         public DateTime DatePosted { get; set; }
-        public virtual Post ParentPost { get; set; }
+        public virtual post ParentPost { get; set; }
     }
 }

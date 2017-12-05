@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using MessageBoardTutorial.Models;
+using System.Web.Mvc;
 
 namespace MessageBoardTutorial.Controllers
 {
@@ -21,6 +22,7 @@ namespace MessageBoardTutorial.Controllers
         {
             return this._ctx.Posts.OrderByDescending(x => x.DatePosted).ToList();
         }
+
     }
 }
-</post></controller>
+
